@@ -1,9 +1,10 @@
+import AboutUs from '@/sections/about-us/page'
 import React from 'react'
 
 const Page = () => {
   
   return (
-    <div>About us</div>
+    <AboutUs />
 
   )
 }

@@ -1,13 +1,16 @@
-import type { Metadata } from "next";
+"use client"
+// import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/layouts/header/page";
 import Footer from "@/layouts/footer/page";
+import { Provider } from 'react-redux'
+import store from "@/store";
 
 
-export const metadata: Metadata = {
-  title: "Boiler",
-  description: "Template",
-};
+// export const metadata: Metadata = {
+//   title: "Boiler",
+//   description: "Template",
+// };
 
 export default function RootLayout({
   children,
@@ -17,9 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        
+
         <Header />
-        {children}
+          <Provider store={store}>
+            {children}
+          </Provider>
         <Footer />
       </body>
     </html>
