@@ -1,0 +1,225 @@
+const featuredProducts = [
+  {
+    id: 1,
+    title: "Three Phase Voltage Stabilizere",
+    image: "/prod-demo.png",
+    price: {
+      amount: "₹65,000",
+      unit: "/Piece",
+    },
+    specs: {
+      cooling: "Air Cooling",
+      phase: "Three Phase",
+      capacity: "40KVA",
+      usage: "Commercial",
+    },
+    tag: "Featured",
+    category: "Voltage Stabilizer",
+    buttonLabel: "Get a Quote",
+    badge: "In Stock",
+  },
+  {
+    id: 2,
+    title: "Three Phase Voltage Stabilizer 2",
+    image: "/prod-demo.png",
+    price: {
+      amount: "₹65,000",
+      unit: "/Piece",
+    },
+    specs: {
+      cooling: "Air Cooling",
+      phase: "Three Phase",
+      capacity: "40KVA",
+      usage: "Commercial",
+    },
+    tag: "Featured",
+    category: "Voltage Stabilizer",
+    buttonLabel: "Get a Quote",
+  },
+  {
+    id: 3,
+    title: "Three Phase Voltage Stabilizer 3",
+    image: "/prod-demo.png",
+    price: {
+      amount: "₹65,000",
+      unit: "/Piece",
+    },
+    specs: {
+      cooling: "Air Cooling",
+      phase: "Three Phase",
+      capacity: "40KVA",
+      usage: "Commercial",
+    },
+    tag: "Featured",
+    category: "Voltage Stabilizer",
+    buttonLabel: "Get a Quote",
+  },
+  {
+    id: 4,
+    title: "Three Phase Voltage Stabilizer 4",
+    image: "/prod-demo.png",
+    price: {
+      amount: "₹65,000",
+      unit: "/Piece",
+    },
+    specs: {
+      cooling: "Air Cooling",
+      phase: "Three Phase",
+      capacity: "40KVA",
+      usage: "Commercial",
+    },
+    tag: "Star",
+    category: "Voltage Stabilizer",
+    buttonLabel: "Get a Quote",
+  },
+
+  // ✅ Servo & Voltage Stabilizers
+  {
+    id: 5,
+    title: "Servo Stabilizer - 10 KVA",
+    image: "/prod-demo.png",
+    price: {
+      amount: "₹22,000",
+      unit: "/Piece",
+    },
+    specs: {
+      cooling: "Oil Cooling",
+      phase: "Single Phase",
+      capacity: "10KVA",
+      usage: "Residential",
+    },
+    tag: "Featured",
+    category: "Servo & Voltage Stabilizers",
+    buttonLabel: "Get a Quote",
+  },
+  {
+    id: 6,
+    title: "Servo Stabilizer - 30 KVA",
+    image: "/prod-demo.png",
+    price: {
+      amount: "₹45,000",
+      unit: "/Piece",
+    },
+    specs: {
+      cooling: "Air Cooling",
+      phase: "Three Phase",
+      capacity: "30KVA",
+      usage: "Industrial",
+    },
+    tag: "Best Seller",
+    category: "Servo & Voltage Stabilizers",
+    buttonLabel: "Get a Quote",
+  },
+  {
+    id: 7,
+    title: "Automatic Voltage Stabilizer 5 KVA",
+    image: "/prod-demo.png",
+    price: {
+      amount: "₹6,500",
+      unit: "/Piece",
+    },
+    specs: {
+      cooling: "Air Cooling",
+      phase: "Single Phase",
+      capacity: "5KVA",
+      usage: "Home Appliances",
+    },
+    tag: "Best Seller",
+    category: "Servo & Voltage Stabilizers",
+    buttonLabel: "Get a Quote",
+  },
+  {
+    id: 8,
+    title: "Digital Servo Stabilizer - 20 KVA",
+    image: "/prod-demo.png",
+    price: {
+      amount: "₹29,500",
+      unit: "/Piece",
+    },
+    specs: {
+      cooling: "Oil Cooling",
+      phase: "Three Phase",
+      capacity: "20KVA",
+      usage: "Commercial",
+    },
+    tag: "Best Seller",
+    category: "Servo & Voltage Stabilizers",
+    buttonLabel: "Get a Quote",
+  },
+
+  // ✅ Online & Offline UPS
+  {
+    id: 9,
+    title: "Online UPS - 1 KVA",
+    image: "/prod-demo.png",
+    price: {
+      amount: "₹12,000",
+      unit: "/Piece",
+    },
+    specs: {
+      cooling: "Air Cooling",
+      phase: "Single Phase",
+      capacity: "1KVA",
+      usage: "Computer Backup",
+    },
+    tag: "Best Seller",
+    category: "Online & Offline UPS",
+    buttonLabel: "Get a Quote",
+  },
+  {
+    id: 10,
+    title: "Offline UPS - 600 VA",
+    image: "/prod-demo.png",
+    price: {
+      amount: "₹3,500",
+      unit: "/Piece",
+    },
+    specs: {
+      cooling: "Air Cooling",
+      phase: "Single Phase",
+      capacity: "600VA",
+      usage: "Desktop PCs",
+    },
+    tag: "Best Seller",
+    category: "Online & Offline UPS",
+    buttonLabel: "Get a Quote",
+  },
+  {
+    id: 11,
+    title: "Online UPS - 5 KVA with Battery",
+    image: "/prod-demo.png",
+    price: {
+      amount: "₹39,000",
+      unit: "/Piece",
+    },
+    specs: {
+      cooling: "Air Cooling",
+      phase: "Three Phase",
+      capacity: "5KVA",
+      usage: "Enterprise",
+    },
+    tag: "Best Seller",
+    category: "Online & Offline UPS",
+    buttonLabel: "Get a Quote",
+  },
+  {
+    id: 12,
+    title: "Offline UPS - 1.2 KVA",
+    image: "/prod-demo.png",
+    price: {
+      amount: "₹7,200",
+      unit: "/Piece",
+    },
+    specs: {
+      cooling: "Air Cooling",
+      phase: "Single Phase",
+      capacity: "1.2KVA",
+      usage: "Home Office",
+    },
+    tag: "Best Seller",
+    category: "Online & Offline UPS",
+    buttonLabel: "Get a Quote",
+  },
+];
+
+export default featuredProducts;

@@ -1,25 +1,27 @@
-import {  createSlice } from "@reduxjs/toolkit";
+import featuredProducts from "@/data/product-data";
+import {  createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-interface productInterface {
-    value: string[]
+type ProductType = typeof featuredProducts[0];
+
+interface ProductState {
+  products: ProductType[];
+  selectedProduct: ProductType | null;
 }
-const initialState:productInterface = {
-    value: []
+
+const initialState: ProductState = {
+  products: featuredProducts,
+  selectedProduct: null,
 };
 
-// export const fetchProductData = createAsyncThunk("products/fetch", async () => {
-//     const res = await axiosInstance.get(`${process.env.NEXT_PUBLIC_API_BASE}/products`)
-//     return res.data.products;
-// })
 const productSlice = createSlice({
     name:'products',
     initialState,
     reducers:{
-        setProducts: (state, action) => {
-            state.value = action.payload;
+        setselectedProduct: (state, action: PayloadAction<typeof featuredProducts[0]>) => {
+            state.selectedProduct = action.payload;
         }
     },
 })
 
-export const {setProducts} = productSlice.actions;
+export const {setselectedProduct} = productSlice.actions;
 export default productSlice.reducer;

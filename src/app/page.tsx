@@ -1,8 +1,13 @@
+import HomeView from '../sections/home/view/home-view'
 
-export default function Home() {
+import React from 'react'
+
+const page = () => {
   return (
-    <div className="home">
-      Hello
-    </div>
-  );
+    <main>
+      <HomeView />
+    </main>
+  )
 }
+
+export default page
