@@ -25,7 +25,20 @@ const ProductSlider = ({ category }: Category) => {
   return (
     <>
       <Swiper
-        slidesPerView={2.2}
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+          },
+          640: {
+            slidesPerView: 1.2,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 2.2,
+          },
+        }}
         spaceBetween={30}
         style={{
           width: '100%',
@@ -70,7 +83,7 @@ const ProductSlider = ({ category }: Category) => {
                   src={product.image}
                   alt='product'
                   fill
-                  
+
                 />
               </Box>
 

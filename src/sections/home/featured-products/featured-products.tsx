@@ -15,7 +15,7 @@ const FeaturedProducts = () => {
   const products = useSelector((state: RootState) => state.products.products.filter((p) => p.tag === 'Featured'))
 
     return (
-        <section className='py-8 px-12' style={{ background: 'linear-gradient(180deg,rgba(247, 249, 252, 1) 0%, rgba(242, 246, 249, 1) 100%);' }} >
+        <section className='py-8 px-4 sm:px-6 lg:px-12' style={{ background: 'linear-gradient(180deg,rgba(247, 249, 252, 1) 0%, rgba(242, 246, 249, 1) 100%)' }} >
             <Box sx={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -25,11 +25,11 @@ const FeaturedProducts = () => {
                 <Typography variant='h2' sx={{ fontWeight: 600, fontSize: '36px', color: 'black', textAlign: 'center' }}>Our Featured Products</Typography>
                 <Typography sx={{ fontWeight: 500, fontSize: '18px', color: '#475569', textAlign: 'center' }}>Premium voltage stabilizers and power solutions for every application</Typography>
             </Box>
-            <Box sx={{ display: 'flex', marginTop: 5, justifyContent: 'space-between' }}>
+            <Box sx={{ display: 'flex', marginTop: 5, justifyContent: 'space-between', flexWrap: 'wrap', gap: 2 }}>
                 {
                     products.map((product, index) => (
 
-                        <Box key={index} sx={{ width: '24%', background: 'white', borderRadius: '10px' }}>
+                        <Box key={index} sx={{ width: {md:'23%', sm:'48%', sx:'98%'}, background: 'white', borderRadius: '10px' }}>
                             <Image src={product.image} alt='product' width={100} height={100} className='w-full h-[230px] object-cover rounded-t-lg' />
                             <Box sx={{
                                 padding: '24px',

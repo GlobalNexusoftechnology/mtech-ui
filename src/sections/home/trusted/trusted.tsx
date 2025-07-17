@@ -5,7 +5,7 @@ import React from 'react'
 
 const Trusted = () => {
   return (
-    <section className='py-8 px-12' style={{paddingBottom: '5rem'}}>
+    <section className='py-8 px-4 sm:px-6 lg:px-12' style={{paddingBottom: '5rem'}}>
             <Box sx={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -18,10 +18,12 @@ const Trusted = () => {
               display: "flex",
               justifyContent: "space-between",
               marginTop: '2rem',
+              flexWrap: 'wrap',
+              gap: 2,
             }}>
               {
                 pageData.trustedCompanies.map((img, index) => (
-                  <Image src={img} key={index} alt='logo' height={100} width={200} />
+                  <Image src={img} key={index} alt='logo' height={100} width={180} />
                 ))
               }
             </Box>

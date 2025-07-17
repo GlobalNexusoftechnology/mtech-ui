@@ -3,7 +3,7 @@ import { MapPin, File, Mail } from 'lucide-react';
 
 const TopHeader = () => {
   return (
-    <section className='bg-[#1E3EA1] py-2 px-12 flex justify-between'>
+    <section className='bg-[#1E3EA1] py-2 px-12 justify-between hidden md:flex'>
         <div className='flex gap-6'>
             <div className='flex gap-2 items-center'>
                 <MapPin color="white" size={18} />    
