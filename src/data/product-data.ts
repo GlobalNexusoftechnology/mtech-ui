@@ -2,7 +2,7 @@ const featuredProducts = [
   {
     id: 1,
     title: "Three Phase Voltage Stabilizere",
-    image: "/prod-demo.png",
+    image: "/product-img/servo.png",
     price: {
       amount: "₹65,000",
       unit: "/Piece",
@@ -21,7 +21,7 @@ const featuredProducts = [
   {
     id: 2,
     title: "Three Phase Voltage Stabilizer 2",
-    image: "/prod-demo.png",
+    image: "/product-img/three-phae.webp",
     price: {
       amount: "₹65,000",
       unit: "/Piece",
@@ -39,7 +39,7 @@ const featuredProducts = [
   {
     id: 3,
     title: "Three Phase Voltage Stabilizer 3",
-    image: "/prod-demo.png",
+    image: "/product-img/single-phase-servo-stabilizer.webp",
     price: {
       amount: "₹65,000",
       unit: "/Piece",
@@ -57,7 +57,7 @@ const featuredProducts = [
   {
     id: 4,
     title: "Three Phase Voltage Stabilizer 4",
-    image: "/prod-demo.png",
+    image: "/product-img/oil-cooled-servo-stabilizer.jpg",
     price: {
       amount: "₹65,000",
       unit: "/Piece",
@@ -77,7 +77,7 @@ const featuredProducts = [
   {
     id: 5,
     title: "Servo Stabilizer - 10 KVA",
-    image: "/prod-demo.png",
+    image: "/product-img/200kva-oil-cooled-servo-stabilizer.webp",
     price: {
       amount: "₹22,000",
       unit: "/Piece",
@@ -95,7 +95,7 @@ const featuredProducts = [
   {
     id: 6,
     title: "Servo Stabilizer - 30 KVA",
-    image: "/prod-demo.png",
+    image: "/product-img/100kva-oil-cooled-servo-stabilizer.webp",
     price: {
       amount: "₹45,000",
       unit: "/Piece",
@@ -113,7 +113,7 @@ const featuredProducts = [
   {
     id: 7,
     title: "Automatic Voltage Stabilizer 5 KVA",
-    image: "/prod-demo.png",
+    image: "/product-img/10kva-servo-satbilizer.webp",
     price: {
       amount: "₹6,500",
       unit: "/Piece",
@@ -131,7 +131,7 @@ const featuredProducts = [
   {
     id: 8,
     title: "Digital Servo Stabilizer - 20 KVA",
-    image: "/prod-demo.png",
+    image: "/product-img/10k-1p.webp",
     price: {
       amount: "₹29,500",
       unit: "/Piece",
@@ -151,7 +151,7 @@ const featuredProducts = [
   {
     id: 9,
     title: "Online UPS - 1 KVA",
-    image: "/prod-demo.png",
+    image: "/product-img/servo-voltage-stabilizer.webp",
     price: {
       amount: "₹12,000",
       unit: "/Piece",
@@ -169,7 +169,7 @@ const featuredProducts = [
   {
     id: 10,
     title: "Offline UPS - 600 VA",
-    image: "/prod-demo.png",
+    image: "/product-img/servo-stabilizer-for-lift.webp",
     price: {
       amount: "₹3,500",
       unit: "/Piece",
@@ -187,7 +187,7 @@ const featuredProducts = [
   {
     id: 11,
     title: "Online UPS - 5 KVA with Battery",
-    image: "/prod-demo.png",
+    image: "/product-img/servo-48.webp",
     price: {
       amount: "₹39,000",
       unit: "/Piece",
@@ -205,7 +205,7 @@ const featuredProducts = [
   {
     id: 12,
     title: "Offline UPS - 1.2 KVA",
-    image: "/prod-demo.png",
+    image: "/product-img/automatic-voltage-stabilizer.webp",
     price: {
       amount: "₹7,200",
       unit: "/Piece",

@@ -1,11 +1,10 @@
-import AboutUs from '@/sections/about-us/page'
+import AboutUs from '@/sections/about-us/view/about-view'
 import React from 'react'
 
 const Page = () => {
   
   return (
-    <AboutUs />
-
+    <AboutUs   />
   )
 }
 

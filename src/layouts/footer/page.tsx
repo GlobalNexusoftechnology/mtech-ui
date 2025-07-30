@@ -2,14 +2,17 @@ import pageData from '@/data/page-data'
 import { Box, Typography } from '@mui/material'
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Youtube } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 const Footer = () => {
   return (
-    <section className='py-8 px-4 sm:px-6 lg:px-12' style={{borderTop: '1px solid #EFF0F6'}}>
+    <section className='py-8 px-4 sm:px-6 lg:px-12' style={{borderTop: '1px solid #EFF0F6', background: '#FFF'}}>
       <Box sx={{display: 'flex', justifyContent: 'space-between', flexWrap:'wrap',gap: 2, paddingBottom: 8,paddingTop: 8, borderBottom: '1px solid #2563EB'}}>
         <Box sx={{width: {md:'22%', sm:'48%', sx:'98%'}}}>
-          <Image src='/logo/logo-mtech.png' alt='logo' height={100} width={150} />
+          <Link href='/'>
+            <Image src='/logo/logo-mtech.png' alt='logo' height={100} width={150} />
+          </Link>
           <Box sx={{
             display: 'flex',
             alignItems: 'center',
@@ -31,9 +34,11 @@ const Footer = () => {
         <Box sx={{width: {md:'22%', sm:'48%', xs:'98%'}, display: 'flex', flexDirection: 'column', gap:1}}>
           <Typography variant='h4' sx={{ fontSize: "18px", fontWeight: 600, color: '#2563EB', marginBottom: 2 }}>Company</Typography>
           {pageData.footer.sections.Company.map((item, index) => (
-            <Typography key={index} sx={{ fontSize: "16px", fontWeight: 400 }}>
-              {item}
+            <Link key={index} href={item.link}>
+            <Typography  sx={{ fontSize: "16px", fontWeight: 400 }}>
+              {item.name}
             </Typography>
+            </Link>
           ))}
         </Box>
         <Box sx={{width: {md:'22%', sm:'48%', xs:'98%'}, display: 'flex', flexDirection: 'column', gap:1}}>
