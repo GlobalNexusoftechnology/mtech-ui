@@ -1,8 +1,9 @@
+import ProductView from '@/sections/product/view/product-view'
 import React from 'react'
 
 const page = () => {
   return (
-    <div>Shop Page</div>
+    <ProductView />
   )
 }
 

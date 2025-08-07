@@ -4,7 +4,7 @@ import TopHeader from '../top-header/page';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ChevronDown, Phone, Menu, X } from 'lucide-react';
-import { Button, Drawer, IconButton } from '@mui/material';
+import { Box, Button, Drawer, IconButton } from '@mui/material';
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <>
       <TopHeader />
-      <header className="py-2 px-6 md:px-12 flex justify-between items-center">
+      <header className="py-2 px-6 md:px-12 flex justify-between items-center bg-white">
         <Link href='/'><Image src="/logo/logo-mtech.png" alt="Logo" width={160} height={80} /></Link>
         <nav className="hidden md:flex items-center gap-10">
           <Link href="/products" className="text-base font-medium flex gap-1 items-center">Products <ChevronDown size={16} /></Link>
@@ -50,12 +50,12 @@ const Header = () => {
             Get a Quote
           </Button>
         </div>
-        <div className="block lg:hidden">
+        <Box sx={{ display: { lg: 'none', md: 'none', sm: 'block' } }}>
 
-        <IconButton  onClick={() => setMobileMenuOpen(true)}>
-  <Menu />
-</IconButton>
-        </div>
+          <IconButton onClick={() => setMobileMenuOpen(true)}>
+            <Menu />
+          </IconButton>
+        </Box>
 
         <Drawer
           anchor="right"

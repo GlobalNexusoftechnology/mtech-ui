@@ -25,7 +25,7 @@ const FeaturedProducts = () => {
                 {
                     products.map((product, index) => (
 
-                        <ProductCard product={product} key={index} />
+                        <ProductCard sx={{ width: { md: '23%', sm: '48%', xs: '98%' } }} product={product} key={index} />
 
                     ))
                 }
