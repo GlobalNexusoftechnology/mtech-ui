@@ -179,14 +179,15 @@ reviews: [
 
   footer: {
     companyName: "MTECH Power Solutions",
+    dev: 'Giga Nexus Technology',
     copyright: "Copyright © 2025 MTech Power Solutions",
     sections: {
       "Products & Services": [
-        "Servo & Voltage Stabilizer",
-        "Online & Offline UPS",
-        "Voltage Transformer",
-        "Servo Stabilizer",
-        "Electric Online UPS",
+        "Three Phase Voltage Stabilizere",
+        "Servo Stabilizer - 10 KVA",
+        "Online UPS - 1 KVA",
+        "Automatic Voltage Stabilizer 5 KVA",
+        "Digital Servo Stabilizer - 20 KVA",
       ],
       Company: [
       {

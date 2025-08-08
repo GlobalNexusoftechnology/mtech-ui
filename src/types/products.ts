@@ -22,6 +22,7 @@ export interface ProductType {
 export interface FullProductType extends ProductType {
   desc: string;
   sku:string,
+  slug: string,
   gallery: string[];
   specifications: string[][];
   keyFeatures: string[];

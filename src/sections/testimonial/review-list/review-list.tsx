@@ -96,13 +96,13 @@ export default function ReviewList() {
                 <Box sx={{ display: 'flex', gap: 4, flexDirection: {md:'row', xs:'column'}}}>
                   <Box sx={{ width: '50%', display: 'flex', flexDirection: 'column' }}>
                     <Typography
-                      variant="body2"
+                      
                       sx={{ color: '#747474', fontWeight: 400, fontSize: '14px' }}
                     >
                       {testimonial.role}
                     </Typography>
                     <Typography
-                      variant="body2"
+                      
                       sx={{ color: '#2563EB', fontWeight: 400, fontSize: '12px' }}
                     >
                       {testimonial.company}

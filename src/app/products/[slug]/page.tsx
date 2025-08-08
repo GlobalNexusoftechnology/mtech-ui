@@ -1,28 +1,28 @@
-'use client'
-import { use, useEffect } from 'react'
-import { fromSlug } from '@/lib/slugified'
-import { RootState } from '@/store'
+import { use } from 'react'
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { setselectedProduct } from '@/store/slices/productSlice'
 import ProductDetail from '@/sections/product-detail/view/product.detail'
+import { fromSlug } from '@/lib/slugified';
+
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+  const product = await fromSlug(params.slug);
+
+  return {
+    title: product ? `${product} | MTech` : 'Product Not Found | MTech',
+    description: product
+      ? `Explore ${product} with top performance and quality.`
+      : 'This product could not be found.',
+  };
+}
 
 const Page = ({params }:{params:Promise<{slug:string}>}) => {
   
   const { slug } = use(params)
-  const productName = fromSlug(slug)
-  const dispatch = useDispatch();
-  const singleProduct = useSelector((state: RootState) => state.products.products.filter((product) => product.title === productName))
+  const productName = slug
   
-  useEffect(() => {
-    if (singleProduct.length > 0) {
-      dispatch(setselectedProduct(singleProduct[0]));
-    }
-  }, [singleProduct, dispatch]);
 
   return (
     <>
-      <ProductDetail /> 
+      <ProductDetail productName={productName} /> 
     </>
   )
 }

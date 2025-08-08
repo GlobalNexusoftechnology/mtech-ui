@@ -5,8 +5,9 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import { RootState } from '@/store';
 import { useSelector } from 'react-redux';
-import { Button, TextField, Typography } from '@mui/material';
+import { Alert, Button, TextField, Typography } from '@mui/material';
 import { Clock, MapPin, PackageSearch, PhoneCall } from 'lucide-react';
+import axiosInstance from '@/lib/axios';
 
 interface TabPanelProps {
     children?: React.ReactNode;
@@ -38,10 +39,14 @@ function a11yProps(index: number) {
 }
 
 export default function FormTab() {
+    const selectedProduct = useSelector((state: RootState) => state.products.selectedProduct)
+  const [success, setSuccess] = React.useState(false);
+
     const [formData, setFormData] = React.useState({
         email: '',
         phone: '',
         message: '',
+        product: selectedProduct?.title,
     });
 
     const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -49,10 +54,18 @@ export default function FormTab() {
         setFormData(prev => ({ ...prev, [name]: value }));
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         console.log(formData);
-        // API call or further logic
+        try {
+            const res = await axiosInstance.post('/api/submit-form', formData)
+            if (res) {
+                setSuccess(true)
+                setFormData({ phone: "", email: "", message: "", product: "" })
+            }
+        } catch (error) {
+            console.log('form api fail', error)
+        }
     };
 
     const [value, setValue] = React.useState(0);
@@ -61,7 +74,6 @@ export default function FormTab() {
         setValue(newValue);
     };
 
-    const selectedProduct = useSelector((state: RootState) => state.products.selectedProduct)
 
     return (
         <Box sx={{ width: '100%', height: '76vh' }}>
@@ -199,12 +211,20 @@ export default function FormTab() {
                     sx={{
                         display: 'flex',
                         flexDirection: 'column',
-                        gap: 1.5,
+                        gap: 1.2,
                         width: '100%',
                         maxWidth: 500,
                         margin: '0 auto',
                     }}
                 >
+                    <TextField
+                        name="product"
+                        sx={{ display: 'none' }}
+                        value={selectedProduct?.title}
+                        onChange={handleFormChange}
+                        required
+                    />
+
                     <TextField
                         fullWidth
                         label="Email Address"
@@ -213,8 +233,8 @@ export default function FormTab() {
                         value={formData.email}
                         onChange={handleFormChange}
                         required
-                        
-                        
+
+
                     />
 
                     <TextField
@@ -225,20 +245,21 @@ export default function FormTab() {
                         value={formData.phone}
                         onChange={handleFormChange}
                         required
-                        
-                        
+
+
                     />
+
 
                     <TextField
                         fullWidth
                         label="Your Message"
                         name="message"
                         multiline
-                        minRows={4}
+                        minRows={3}
                         value={formData.message}
                         onChange={handleFormChange}
                         required
-                       
+
                     />
 
                     <Button
@@ -252,11 +273,16 @@ export default function FormTab() {
                             color: 'white',
                             width: '100%',
                             py: 1.2,
-                            mt: 2,
+                            mt: 1,
                         }}
                     >
                         Send Email
                     </Button>
+                    {success && (
+                        <Alert severity="success" sx={{ mt: 1 }}>
+                            Form submitted successfully!
+                        </Alert>
+                    )}
                 </Box>
 
             </CustomTabPanel>

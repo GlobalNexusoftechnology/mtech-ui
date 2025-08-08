@@ -1,9 +1,11 @@
+import { toSlug } from "@/lib/slugified";
 import { CategoriesEnum } from "./category";
 
 const featuredProducts = [
   {
     id: 1,
     title: "Three Phase Voltage Stabilizere",
+    slug: toSlug("Three Phase Voltage Stabilizere"),
     desc: 'Advanced 60KVA Servo Voltage Stabilizer designed for industrial applications. Features oil cooling system for enhanced performance and durability. Equipped with digital display and automatic voltage correction technology.',
     image: "/product-img/servo.png",
     price: {
@@ -57,6 +59,7 @@ const featuredProducts = [
   {
     id: 2,
     title: "Three Phase Voltage Stabilizer 2",
+    slug: toSlug("Three Phase Voltage Stabilizer 2"),
     desc: 'Advanced 60KVA Servo Voltage Stabilizer designed for industrial applications. Features oil cooling system for enhanced performance and durability. Equipped with digital display and automatic voltage correction technology.',
     image: "/product-img/three-phae.webp",
     price: {
@@ -109,6 +112,7 @@ const featuredProducts = [
   {
     id: 3,
     title: "Three Phase Voltage Stabilizer 3",
+    slug: toSlug("Three Phase Voltage Stabilizer 3"),
     desc: 'Advanced 60KVA Servo Voltage Stabilizer designed for industrial applications. Features oil cooling system for enhanced performance and durability. Equipped with digital display and automatic voltage correction technology.',
     image: "/product-img/single-phase-servo-stabilizer.webp",
     price: {
@@ -161,6 +165,7 @@ const featuredProducts = [
   {
     id: 4,
     title: "Three Phase Voltage Stabilizer 4",
+    slug: toSlug("Three Phase Voltage Stabilizer 4"),
     desc: 'Advanced 60KVA Servo Voltage Stabilizer designed for industrial applications. Features oil cooling system for enhanced performance and durability. Equipped with digital display and automatic voltage correction technology.',
     image: "/product-img/oil-cooled-servo-stabilizer.jpg",
     price: {
@@ -215,6 +220,7 @@ const featuredProducts = [
   {
     id: 5,
     title: "Servo Stabilizer - 10 KVA",
+    slug: toSlug("Servo Stabilizer - 10 KVA"),
     desc: 'Advanced 60KVA Servo Voltage Stabilizer designed for industrial applications. Features oil cooling system for enhanced performance and durability. Equipped with digital display and automatic voltage correction technology.',
     image: "/product-img/200kva-oil-cooled-servo-stabilizer.webp",
     price: {
@@ -267,6 +273,7 @@ const featuredProducts = [
   {
     id: 6,
     title: "Servo Stabilizer - 30 KVA",
+    slug: toSlug("Servo Stabilizer - 30 KVA"),
     desc: 'Advanced 60KVA Servo Voltage Stabilizer designed for industrial applications. Features oil cooling system for enhanced performance and durability. Equipped with digital display and automatic voltage correction technology.',
     image: "/product-img/100kva-oil-cooled-servo-stabilizer.webp",
     price: {
@@ -319,6 +326,7 @@ const featuredProducts = [
   {
     id: 7,
     title: "Automatic Voltage Stabilizer 5 KVA",
+    slug: toSlug("Automatic Voltage Stabilizer 5 KVA"),
     desc: 'Advanced 60KVA Servo Voltage Stabilizer designed for industrial applications. Features oil cooling system for enhanced performance and durability. Equipped with digital display and automatic voltage correction technology.',
     image: "/product-img/10kva-servo-satbilizer.webp",
     price: {
@@ -371,6 +379,7 @@ const featuredProducts = [
   {
     id: 8,
     title: "Digital Servo Stabilizer - 20 KVA",
+    slug: toSlug("Digital Servo Stabilizer - 20 KVA"),
     desc: 'Advanced 60KVA Servo Voltage Stabilizer designed for industrial applications. Features oil cooling system for enhanced performance and durability. Equipped with digital display and automatic voltage correction technology.',
     image: "/product-img/10k-1p.webp",
     price: {
@@ -425,6 +434,7 @@ const featuredProducts = [
   {
     id: 9,
     title: "Online UPS - 1 KVA",
+    slug: toSlug("Online UPS - 1 KVA"),
     desc: 'Advanced 60KVA Servo Voltage Stabilizer designed for industrial applications. Features oil cooling system for enhanced performance and durability. Equipped with digital display and automatic voltage correction technology.',
     image: "/product-img/servo-voltage-stabilizer.webp",
     price: {
@@ -477,6 +487,7 @@ const featuredProducts = [
   {
     id: 10,
     title: "Offline UPS - 600 VA",
+    slug: toSlug("Offline UPS - 600 VA"),
     desc: 'Advanced 60KVA Servo Voltage Stabilizer designed for industrial applications. Features oil cooling system for enhanced performance and durability. Equipped with digital display and automatic voltage correction technology.',
     image: "/product-img/servo-stabilizer-for-lift.webp",
     price: {
@@ -529,6 +540,7 @@ const featuredProducts = [
   {
     id: 11,
     title: "Online UPS - 5 KVA with Battery",
+    slug: toSlug("Online UPS - 5 KVA with Battery"),
     desc: 'Advanced 60KVA Servo Voltage Stabilizer designed for industrial applications. Features oil cooling system for enhanced performance and durability. Equipped with digital display and automatic voltage correction technology.',
     image: "/product-img/servo-48.webp",
     price: {
@@ -581,6 +593,7 @@ const featuredProducts = [
   {
     id: 12,
     title: "Offline UPS - 1.2 KVA",
+    slug: toSlug("Offline UPS - 1.2 KVA"),
     desc: 'Advanced 60KVA Servo Voltage Stabilizer designed for industrial applications. Features oil cooling system for enhanced performance and durability. Equipped with digital display and automatic voltage correction technology.',
     image: "/product-img/automatic-voltage-stabilizer.webp",
     price: {

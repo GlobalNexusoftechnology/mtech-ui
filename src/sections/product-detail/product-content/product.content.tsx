@@ -14,7 +14,6 @@ import {
   Truck,
   Clock,
   Headphones,
-  Star,
   Minus,
   Plus,
 } from 'lucide-react';
@@ -42,7 +41,7 @@ const ProductContent = () => {
         {singleProductData?.title}
       </Typography>
 
-      <Stack direction="row" spacing={2} alignItems="center" flexWrap="wrap" mb={1}>
+      {/* <Stack direction="row" spacing={2} alignItems="center" flexWrap="wrap" mb={1}>
         <Stack direction="row" spacing={0.5} alignItems="center">
           {Array(5).fill(0).map((_, i) => (
             <Star key={i} size={16} color="#FACC15" />
@@ -59,7 +58,7 @@ const ProductContent = () => {
             sx={{ fontSize: 12, fontWeight: 500 }}
           />
         </Box>
-      </Stack>
+      </Stack> */}
 
       <Stack direction="row" spacing={2} alignItems="flex-end" mb={1}>
         <Typography variant="h4" fontWeight={700} color="#2563EB">
