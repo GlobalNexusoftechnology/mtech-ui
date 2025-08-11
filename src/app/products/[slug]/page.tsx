@@ -3,8 +3,8 @@ import React from 'react'
 import ProductDetail from '@/sections/product-detail/view/product.detail'
 import { fromSlug } from '@/lib/slugified';
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const product = await fromSlug(params.slug);
+export async function generateMetadata({params }:{params:Promise<{slug:string}>}) {
+  const product = await fromSlug((await params).slug);
 
   return {
     title: product ? `${product} | MTech` : 'Product Not Found | MTech',

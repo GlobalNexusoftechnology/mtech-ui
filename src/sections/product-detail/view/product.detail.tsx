@@ -22,7 +22,7 @@ const ProductDetail = ({productName}:ProName) => {
       if (singleProduct.length > 0) {
         dispatch(setselectedProduct(singleProduct[0]));
       }
-    }, []);
+    }, [dispatch, singleProduct]);
 
   return (
     <div className="py-2 px-6 md:px-12 flex justify-between items-center flex-col">
