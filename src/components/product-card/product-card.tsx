@@ -24,7 +24,7 @@ const ProductCard = ({ product, sx }: ProductCardProps) => {
             <Box sx={{
                 padding: '24px',
             }}>
-                <Link href={`products/${toSlug(product.title)}`}
+                <Link href={`/products/${toSlug(product.title)}`}
                 
                 >
                     <Typography sx={{ fontWeight: 700, fontSize: '24px', color: '#2563EB' }}>{product.price.amount}<span style={{ color: "#505050", fontSize: '14px' }}>{product.price.unit}</span></Typography>

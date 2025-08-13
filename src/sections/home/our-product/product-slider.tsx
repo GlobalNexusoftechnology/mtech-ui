@@ -10,6 +10,7 @@ import Popup from '@/components/popup/popup'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '@/store'
 import { setselectedProduct } from '@/store/slices/productSlice'
+import Link from 'next/link'
 
 type Category = {
   category: string
@@ -96,33 +97,36 @@ const ProductSlider = ({ category }: Category) => {
                   width: '50%',
                 }}
               >
-                <Typography
-                  sx={{
-                    fontWeight: 600,
-                    fontSize: '18px',
-                    color: 'black',
-                    textAlign: 'left',
-                    whiteSpace: 'nowrap',
-                    overflow: 'hidden',
-                    textOverflow: 'ellipsis',
-                  }}
-                >
-                  {product.title}
-                </Typography>
-                <Typography
-                  sx={{
-                    fontWeight: 700,
-                    fontSize: '24px',
-                    color: '#2563EB',
-                    textAlign: 'left',
-                  }}
-                >
-                  {product.price.amount}
-                  <span style={{ color: '#505050', fontSize: '14px' }}>
-                    {product.price.unit}
-                  </span>
-                </Typography>
+                <Link href={`/products/${product.slug}`}>
 
+
+                  <Typography
+                    sx={{
+                      fontWeight: 600,
+                      fontSize: '18px',
+                      color: 'black',
+                      textAlign: 'left',
+                      whiteSpace: 'nowrap',
+                      overflow: 'hidden',
+                      textOverflow: 'ellipsis',
+                    }}
+                  >
+                    {product.title}
+                  </Typography>
+                  <Typography
+                    sx={{
+                      fontWeight: 700,
+                      fontSize: '24px',
+                      color: '#2563EB',
+                      textAlign: 'left',
+                    }}
+                  >
+                    {product.price.amount}
+                    <span style={{ color: '#505050', fontSize: '14px' }}>
+                      {product.price.unit}
+                    </span>
+                  </Typography>
+                </Link>
                 <Box
                   sx={{
                     display: 'flex',

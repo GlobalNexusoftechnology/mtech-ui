@@ -40,7 +40,8 @@ function a11yProps(index: number) {
 
 export default function FormTab() {
     const selectedProduct = useSelector((state: RootState) => state.products.selectedProduct)
-  const [success, setSuccess] = React.useState(false);
+    const [success, setSuccess] = React.useState(false);
+    const [loading, setLoading] = React.useState(true)
 
     const [formData, setFormData] = React.useState({
         email: '',
@@ -57,11 +58,14 @@ export default function FormTab() {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         console.log(formData);
+        setLoading(false)
         try {
             const res = await axiosInstance.post('/api/submit-form', formData)
             if (res) {
                 setSuccess(true)
                 setFormData({ phone: "", email: "", message: "", product: "" })
+                setLoading(true)
+
             }
         } catch (error) {
             console.log('form api fail', error)
@@ -255,7 +259,7 @@ export default function FormTab() {
                         label="Your Message"
                         name="message"
                         multiline
-                        minRows={3}
+                        minRows={2}
                         value={formData.message}
                         onChange={handleFormChange}
                         required
@@ -276,10 +280,10 @@ export default function FormTab() {
                             mt: 1,
                         }}
                     >
-                        Send Email
+                        {loading ? 'Send Email' : 'Sending...'}
                     </Button>
                     {success && (
-                        <Alert severity="success" sx={{ mt: 1 }}>
+                        <Alert severity="success" sx={{ mt: 0.3 }}>
                             Form submitted successfully!
                         </Alert>
                     )}

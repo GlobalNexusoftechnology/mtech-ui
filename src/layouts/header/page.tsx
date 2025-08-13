@@ -15,12 +15,14 @@ const Header = () => {
       <header className="py-2 px-6 md:px-12 flex justify-between items-center bg-white">
         <Link href='/'><Image src="/logo/logo-mtech.png" alt="Logo" width={160} height={80} /></Link>
         <nav className="hidden md:flex items-center gap-10">
-          <Link href="/products" className="text-base font-medium flex gap-1 items-center">Products <ChevronDown size={16} /></Link>
+          <Link href="/products" className="text-base font-medium flex gap-1 items-center">Products </Link>
           <Link href="/about-us" className="text-base font-medium flex gap-1 items-center">About Us</Link>
           <Link href="/testimonial" className="text-base font-medium flex gap-1 items-center">Testimonial</Link>
           <Link href="/contact-us" className="text-base font-medium flex gap-1 items-center">Contact Us</Link>
         </nav>
         <div className="hidden md:flex gap-2">
+          <Link href='tel:9372435979'>
+
           <Button
             variant="outlined"
             sx={{
@@ -39,16 +41,19 @@ const Header = () => {
             <Phone size={15} />
             Call Us
           </Button>
-          <Button
-            variant="contained"
-            sx={{
-              backgroundColor: '#1E3EA1',
-              fontWeight: 500,
-              textTransform: 'none',
-            }}
-          >
-            Get a Quote
-          </Button>
+          </Link>
+          {/* <Link href='/contact-us'>
+            <Button
+              variant="contained"
+              sx={{
+                backgroundColor: '#1E3EA1',
+                fontWeight: 500,
+                textTransform: 'none',
+              }}
+            >
+              Get a Quote
+            </Button>
+          </Link> */}
         </div>
         <Box sx={{ display: { lg: 'none', md: 'none', sm: 'block' } }}>
 

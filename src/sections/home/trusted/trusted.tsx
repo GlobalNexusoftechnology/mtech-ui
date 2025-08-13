@@ -16,7 +16,7 @@ const Trusted = () => {
             </Box>
             <Box sx={{
               display: "flex",
-              justifyContent: "space-between",
+              justifyContent: {md:"space-between", xs:'center'},
               marginTop: '2rem',
               flexWrap: 'wrap',
               gap: 2,

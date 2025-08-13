@@ -9,6 +9,7 @@ const OurProduct = () => {
                 display: 'flex',
                 flexDirection: 'column',
                 paddingTop: '1rem',
+                padding:{xs: '5px'},
                 gap: 1,
             }}>
                 <Typography variant='h2' sx={{ fontWeight: 600, fontSize: '36px', color: 'black', textAlign: 'center' }}>Our Products</Typography>
